@@ -1,0 +1,14 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="#">Fixed navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item <%= 'active' if current_page?('/') || current_page?('/veterinarians') %>"><%= link_to 'Doctors', veterinarians_path, class: 'nav-link' %></li>
+      <li class="nav-item <%= 'active' if current_page?('/owners') %>"><%= link_to 'Owners', owners_path, class: 'nav-link' %></li>
+      <li class="nav-item <%= 'active' if current_page?('/pets') %>"><%= link_to 'Pets', pets_path, class: 'nav-link' %></li>
+    </ul>
+    <%= yield :navigation %>
+  </div>
+</nav>

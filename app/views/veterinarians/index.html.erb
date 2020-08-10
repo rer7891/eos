@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Veterinarians</h1>
+
+<table class='table table-hover'>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Client/Owners</th>
+      <th>Cats</th>
+      <th>Dogs</th>
+      <th>Other</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @veterinarians.each do |veterinarian| %>
+      <tr>
+        <td><%= veterinarian.name %></td>
+        <td><%= veterinarian.phone %></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><%= link_to 'Show', veterinarian %></td>
+        <td><%= link_to 'Edit', edit_veterinarian_path(veterinarian) %></td>
+        <td><%= link_to 'Destroy', veterinarian, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Veterinarian', new_veterinarian_path, class: 'btn btn-success' %>

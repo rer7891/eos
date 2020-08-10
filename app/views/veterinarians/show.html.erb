@@ -1,0 +1,21 @@
+<% content_for :navigation do %>
+  <%= render 'layouts/search' %>
+<% end %>
+
+<p id="notice"><%= notice %></p>
+
+<h2><%= @veterinarian.name %> <small>Veterinarian</small></h2>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @veterinarian.phone %>
+</p>
+
+<h3>Search Results</h3>
+<p id='no-results'>No results...</p>
+<ul id='search_results'>
+  <!--
+    Search results go here
+  -->
+</ul>
+

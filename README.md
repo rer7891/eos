@@ -30,3 +30,4 @@ This project uses rails 6, sqlite3, and JavaScript. The JavaScript was translate
 1. Then take a look at the three models to see if their relationships are established.
 
 You do not need to fully complete this challenge, but what you do finish should be correct. We suggest you start on the back-end first, and then work on the front end.
+# Charter-Challenge

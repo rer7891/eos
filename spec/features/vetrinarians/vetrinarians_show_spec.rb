@@ -4,7 +4,7 @@ require 'rails_helper'
 RSpec.describe "As a user I'm able to visit a vetrinarian show page", type: :feature do
   describe "when I visit I will see a search box that allows a user to search pets" do
     before :each do
-        @vetrinarian = Veterinarian.create()
+        @veterinarian = Veterinarian.create()
         @owner_1 = @vetrinarian.owners.create()
         @owner_2 = @vetrinarian.owners.create()
         @pet_1 = @owner_1.pets.create()
@@ -13,7 +13,7 @@ RSpec.describe "As a user I'm able to visit a vetrinarian show page", type: :fea
     end
 
     it "it can search for pets that belong to owner" do
-        visit 
+        visit "/veterinarian/#{@veterinarian.id}"
         click_on "Add New Item"
         expect(current_path).to eq(new_merchant_dash_item_path)
 
